@@ -34,7 +34,9 @@ int main() {
     priority_queue<Node, vector<Node>, greater<Node>> pq;
 
     for (int i = 0; i < k; i++) {
-        pq.push({a[i][0], 0, i});
+        if (!a[i].empty()) {
+            pq.push({a[i][0], 0, i});
+        }
     }
     while (pq.size() != 0) {
         Node cur = pq.top();
@@ -42,7 +44,7 @@ int main() {
         cout << cur.val << ' ';
         int idx = cur.idx;
         int row = cur.row;
-        if (idx != a[row].size() - 1) {
+        if (idx + 1 < a[row].size()) {
             pq.push({a[row][idx + 1], idx + 1, row});
         }
     }
