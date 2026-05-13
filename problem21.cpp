@@ -1,3 +1,7 @@
+// Time:O(MlogM+K⋅N⋅MlogN)
+// Space:O(K⋅N+M)
+
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
