@@ -9,7 +9,7 @@ int a[MAXN], tmp[MAXN];
 long long merge_sort(int left, int right) {
     if (left >= right) return 0;
 
-    int mid = left + right >> 1;
+    int mid = (left + right) >> 1;
     long long ans = 0;
     ans += merge_sort(left, mid);
     ans += merge_sort(mid+1, right);
